@@ -1,0 +1,367 @@
+html {
+	box-sizing: border-box;
+}
+/*----------
+Color
+----------*/
+	html {
+		/*Blue*/
+		--color-primary-1: #2855dc;
+		--color-primary-2: #6384e7;
+		--color-primary-3: #102297;
+
+		/*Orange*/
+		--color-secondary-1: #efaa71;
+		--color-secondary-2: #ef8e43;
+		--color-secondary-3: #f5c68c;
+
+		
+		/*Neutrals*/
+		--color-tertiary-1: rgba(217, 225, 252, .7);
+		--color-tertiary-2: #ef8e43;
+		--color-tertiary-3: #031E13;
+		
+		/*Sizes*/
+		--ratio:			1.333;
+		--size-xsmall: 		calc( var(--size-small) / (var(--ratio) ) );
+		--size-small: 		calc( var(--size-medium) / (var(--ratio) ) );
+		--size-medium: 		calc( 1rem * var(--ratio) );
+		--size-large: 		calc( var(--size-medium) * var(--ratio) );
+		--size-xlarge: 		calc( var(--size-large) * var(--ratio) );
+		--size-2xlarge: 	calc( var(--size-xlarge) * var(--ratio) );
+		--size-3xlarge: 	calc( var(--size-2xlarge) * var(--ratio) );
+	}
+
+/*----------
+Typography
+----------*/
+	html {
+		--font-primary: 'Fira Sans', 'Roboto', 'Veranda', sans-serif;
+		--font-secondary: 'Montserrat', 'Roboto', 'Veranda', sans-serif;
+		
+		color: var(--color-tertiary-3);
+		font-family: var(--font-primary);
+		line-height: 1.4;
+	}
+	.primary-font {
+		font-family: var(--font-primary);
+	}
+	.secondary-font {
+		font-family: var(--font-seconday);
+	}
+	.logo-text {
+		color: var(--color-primary-3);
+		font-family: var(--font-primary);
+		font-size: var(--size-xlarge);
+		margin: 3vh 5vw;
+	}
+	/*----------
+	Links
+	----------*/
+		a {
+			color: var(--color-tertiary-3);
+			text-decoration: none;
+		}
+		a:visited {
+			color: var(--color-tertiary-3);
+		}
+		a:hover {
+			color: var(--color-tertiary-2);
+		}
+		a:active {
+			color: var(--color-secondary-1);
+		}
+		a:focus {
+			color: var(--color-tertiary-2);
+		}
+
+	/*----------
+	Headings
+	----------*/
+		h1, h2, h3, h4, h5, h6 {
+		color: var(--color-tertiary-3);
+		font-family: var(--font-secondary);
+		}
+		h1 {
+			font-size: var(--size-2xlarge);
+			text-align: center;
+		}
+		h2 {
+			font-size: var(--size-xlarge);
+		}
+		h3 {
+			font-size: var(--size-large);
+		}
+		h4, h5, h6 {
+			font-size: var(--size-medium);
+		}
+
+/*----------
+Navigation
+----------*/
+	/*----------
+	Primary Nav
+	----------*/
+		nav {
+			align-items: flex-end;
+			background-image: url(images/banana-nut-waffle.jpg);  
+			background-size: cover;
+			display: flex;
+			justify-content: space-between;
+		}
+		nav ul {
+			background-color: var(--color-tertiary-1);
+			display: inline-block;
+			margin: 0;
+			padding: .5rem 0; 
+		}
+		nav li {
+			
+			display: inline;
+			text-align: right;
+			padding: .25rem;
+			margin: .5rem;
+		}
+		nav a {
+			margin-bottom: .5rem;
+			padding: .5rem;
+			text-decoration: none;
+		}
+		.current-page {
+			border-bottom: .2rem solid var(--color-primary-3);
+			padding: 0 .5rem;
+			margin: .75rem 0;
+
+			}
+		a.logo-tex  {
+			color: var(--color-primary-3);
+			font-family: var(--font-primary);
+			font-size: var(--size-xlarge);
+			margin: 3vh 5vw;
+		}
+
+	/*----------
+	Secondary Nav
+	----------*/
+		.secondary-nav {
+			background-color: var(--color-secondary-1);
+			background-image: none; 
+			font-size: var(--size-small);
+			padding: 1rem;
+		}
+		.secondary-nav a {
+			color: var(--color-tertiary-3);
+			padding: 0;
+			margin: .5rem 5vw;
+		}
+		.secondary-nav a.current-page {
+			color: var(--color-primary-3);
+			border: none;
+		}
+		.secondary-nav ul {
+			background-color: transparent;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		.secondary-nav li {
+			margin: 0;
+			text-align: left;
+		}
+
+/*----------
+Body
+----------*/
+	body {
+		margin: 0;
+	}
+	main {
+		max-width: 100vw;
+	}
+
+/*----------
+Layouts
+----------*/
+	/*----------
+	Home
+	----------*/
+		.hero-container {
+			max-width: 100%;
+			padding: 5vh 0 0 0;
+			background-color: var(--color-primary-3);
+		}
+		.hero-text {
+			background-color: var(--color-tertiary-1);
+			color: var(--color-primary-3);
+			font-size: var(--size-3xlarge);
+			left: 14%;
+			right: 15%;
+			text-align: center;
+			margin-top: 15vh;
+			padding: 2rem;
+			position: absolute;
+		}
+		.mySlides {	
+			height: 65vh;
+			width: 100%;
+			margin: auto;
+			object-fit: cover;
+			z-index: -1;
+		}
+		.waffull-introduction {
+			margin:  0 auto 5vh; 
+			max-width: 50vw;
+		}
+		.waffle-gallery img {
+			height: 40vh;
+			object-fit: cover;
+			object-position: center;
+			padding: 1rem 4rem 1rem 0;
+			width: 50vw;	
+		}	
+		.waffle-gallery {
+			margin: 0 auto 15vh; 
+			width: 50vw;
+		}
+	/*----------
+	Menu
+	----------*/
+		.menu {
+			margin: 0 10vw;
+			font-size: var(--size-large);
+		}
+		.menu img {
+			height: 40vh;
+			object-fit: cover;
+			object-position: center;
+			padding: 1rem 4rem 1rem 0;
+			width: 40vw;
+		}
+		button {
+			background-color: var(--color-primary-3);
+			border: none;
+			border-radius: 5px;
+			color: white;
+			margin: .5rem auto 5rem;
+			padding: 1rem 1.5rem;
+			text-align: center;
+			text-decoration: none;
+			display: block;
+			font-size: var(--size-medium);
+		}
+		td {
+			padding-left: 1rem;
+		}
+	/*----------
+	Specials
+	----------*/
+		.popup .menu {
+			margin: 0 2vw;
+			font-size: var(--size-large);
+		}
+		main.popup {
+			background-color: var(--color-primary-3);
+			padding: 1vw;
+		}
+		div.popup {
+			background-color: white;
+			margin: 3vw;
+		}
+		.popup button {
+			background-color: var(--color-primary-3);
+			border: none;
+			border-radius: 5px;
+			color: white;
+			margin: 0;
+			padding: .5rem 1rem;
+			text-align: center;
+			text-decoration: none;
+			display: block;
+			font-size: var(--size-small);
+		}
+		.popup .close-header {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+		.close-header {
+			margin: 0 2vw;
+		}
+		.close-header h1 {
+			margin: 2rem auto;
+		}
+
+	/*----------
+	Today's Specials
+	----------*/
+		.orderMenu {
+			margin: auto;
+			max-width: 80vw;
+		}
+		.specials-list {
+
+		}
+		.waffle-special {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;/*flex-end*/
+		}
+		.special-waffle-card {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+		}
+		.special-waffle-card input {
+			height: 40vh;
+			width: 30vw;
+			object-fit: cover;
+			object-position: center;
+			margin: 4vh 2vw 0 0; 
+		}
+		.special-waffle-card label {
+			font-size: var(--size-large);
+		}
+		.qty {
+			font-size: var(--size-small);
+			padding: 3vh 2vw;
+		}
+		.price-subtotal {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.price-subtotal span {
+			font-size: var(--size-small);
+		}
+		.item-subtotal {
+			font-size: var(--size-medium);
+			margin-left: 5vw;
+		}
+		.total-summary {
+			text-align: right;
+		}
+		.total-summary h2,h3 {
+			margin-bottom: 0;
+
+		}
+		.subtotal-display, .tax, .total-display {
+			align-items: baseline;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+		.subtotal-display h3, .tax h3, .total-display h2 {
+			margin-right: 5vw;
+		}
+
+
+
+
+
+
+
+
+
+

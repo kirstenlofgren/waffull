@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Restaurant Project Kirsten Lofgren</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:300" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script async src="calculate.js"></script>
+	
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="index.html">
+				<p class="logo-text">Waffull</p>
+			</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="todaysspecials.html" class="current-page">Today’s Specials</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<form class="orderMenu" action="#">
+			<div class="specials-list">
+				<div class="waffle-special">
+					<div class="special-waffle-card">
+					    <input type="image" src="images/belgian-waffle.jpg" alt="Belgian Waffle" class="special-waffle-menu-image">
+					    <label for="image">Belgian Waffle</label>
+					</div>			  
+
+				  	<input type="number" name="qty" class="qty" id="qty1" min="0" max="10">
+
+				  	<div class="price-subtotal">
+				  		<p>$<span class="price">6.00</span></p>
+
+					  	<div class="item-subtotal">
+					  		<p class="original-p">$0.00</p>
+					  		<!-- Subtotal appended here -->
+					  	</div>
+				  	</div>
+				</div>
+
+				<div class="waffle-special">
+					<div class="special-waffle-card">
+					    <input type="image" src="images/french-waffle.jpg" alt="French Waffle" class="special-waffle-menu-image">
+					    <label for="image">French Waffle</label>
+					</div>			  
+					
+				  	<input type="number" name="qty" class="qty" id="qty2" min="0" max="10">
+
+					<div class="price-subtotal"> 	
+					  	<p>$<span class="price">5.00</span></p>
+
+					  	<div class="item-subtotal">
+					  		<p class="original-p">$0.00</p>
+					  		<!-- Subtotal appended here -->
+					  	</div>
+				  	</div>
+				</div>	
+
+				<div class="waffle-special">
+					<div class="special-waffle-card">
+					    <input type="image" src="images/hongkong-waffle.jpg" alt="Hongkong Waffle" class="special-waffle-menu-image">
+					    <label for="image">Hongkong Waffle</label>
+					</div>			  
+				  	
+				  	<input type="number" name="qty" class="qty" min="0" max="10">
+
+					<div class="price-subtotal">	
+					  	<p>$<span class="price">5.00</span></p>
+
+					  	<div class="item-subtotal">
+					  		<p class="original-p">$0.00</p>
+					  		<!-- Subtotal appended here -->
+					  	</div>
+				  	</div>  
+				</div>
+
+				<div class="waffle-special">
+					<div class="special-waffle-card">
+					    <input type="image" src="images/stroopwaffle.jpg" alt="Stroopwaffle" class="special-waffle-menu-image">
+					    <label for="image">Stroopwaffle</label>
+					</div>			  
+					
+				  	<input type="number" name="qty" class="qty" min="0" max="10">
+
+					<div class="price-subtotal">	
+					  	<p>$<span class="price">5.00</span></p>
+
+					  	<div class="item-subtotal">
+					  		<p class="original-p">$0.00</p>
+					  		<!-- Subtotal appended here -->
+					  	</div>
+				  	</div>  
+				</div>	
+
+				<div class="waffle-special">
+					<div class="special-waffle-card">
+					    <input type="image" src="images/swedish-waffle.jpg" alt="Swedish Waffle" class="special-waffle-menu-image">
+					    <label for="image">Swedish Waffle</label>
+					</div>			  
+					
+				  	<input type="number" name="qty" class="qty" min="0" max="10">
+
+					<div class="price-subtotal">	
+					  	<p>$<span class="price">5.00</span></p>
+
+					  	<div class="item-subtotal">
+					  		<p class="original-p">$0.00</p>
+					  		<!-- Subtotal appended here -->
+					  	</div>
+				  	</div>  
+				</div>	
+			</div>
+			<div class="total-summary">
+				<div class="subtotal-display">
+					<h3>Subtotal</h3>
+				</div>
+
+				<div class="tax">
+					<h3>Tax</h3>
+					<p>8.25%</p>
+				</div>
+				
+				<div class="total-display">
+					<h2>Total</h2>
+				</div>
+			</div>
+
+			<button type="submit" onclick="calculate()" class="alert">See Order Total</button>
+		</form>
+	</main>
+
+	<footer>
+		<div>
+			<nav class="secondary-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="todaysspecials.html" class="current-page">Today’s Specials</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+
+</body>
+</html>
